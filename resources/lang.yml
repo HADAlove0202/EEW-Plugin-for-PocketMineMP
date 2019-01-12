@@ -1,0 +1,43 @@
+########################
+#%region% 震央地名
+#%intensity% 予想震度
+#%magunitude% マグニチュード
+#%depth% 深さ
+#%latitude% 緯度(北緯)
+#%longitude% 経度(東経)
+#%origin_time% 発生日時 configでフォーマット変更可能
+#%report_num% 何報目か
+#
+#%n 改行
+########################
+alert-console: "緊急地震速報 (警報)を受信しました。|%origin_time% 発生|%n%report_num%|%region%(北緯: %latitude%度, 東経: %longitude%度)|震度:%intensity%|マグニチュード:%magunitude%|深さ:%depth%"
+alert-broadcast: "緊急地震速報"
+alert-message: "&c緊急地震速報 (警報) | %report_num%%n &e%origin_time% &f発生%n&f 震央: &e%region%(北緯: &e%latitude%度, 東経: &e%longitude%度)%n &f震度: &e%intensity%%n &fマグニチュード: &e%magunitude%%n &f深さ: &e%depth%"
+alert-title: "&c緊急地震速報"
+alert-subtitle: "&e%region%で震度%intensity%の強い地震"
+forecast-console: "緊急地震速報 (予報)を受信しました。|%origin_time% 発生|%report_num%|%region%(北緯: %latitude%度, 東経: %longitude%度)|震度:%intensity%|マグニチュード:%magunitude%|深さ:%depth%"
+forecast-broadcast: "緊急地震速報 (予報)"
+forecast-message: "緊急地震速報 (予報) | %report_num%%n &f震央: &e%region%(北緯: &e%latitude%度, 東経: &e%longitude%度)%n &f震度: &e%intensity%%n &fマグニチュード: &e%magunitude%%n &f深さ: &e%depth%"
+forecast-title: "&c緊急地震速報"
+forecast-subtitle: "&e%region%で震度%intensity%の地震"
+cancelled: "先ほどの緊急地震速報はキャンセルされました。"
+
+command-status: "サーバーが起動してから%earthquakecount%回の地震、%reportcount%報を受信しました。"
+command-status-off: "緊急地震速報の受信がオフになっています。"
+command-status-error: "緊急地震速報は受信できていません。"
+command-eew-on: "緊急地震速報の受信を開始しました。"
+command-eew-off: "緊急地震速報の受信を停止しました。"
+command-eew-on-already: "&c緊急地震速報の受信は既にオンになっています。"
+command-eew-off-already: "&c緊急地震速報の受信は既にオフになっています。"
+command-eew-reloadconfig: "Configを再読込しました。"
+command-eew-reloadlang: "言語ファイルを再読込しました。"
+
+eew-on: "緊急地震速報の受信はオンになっています。"
+eew-off: "緊急地震速報の受信はオフになっています。"
+eew-error: "緊急地震速報が受信できません。"
+eew-restart: "緊急地震速報の受信を再開しました。"
+
+time-sync-start: "時間の同期を開始します。"
+time-fixed-1: "%time%秒の遅れを修正しました。"
+time-fixed-2: "%time%秒の早まりを修正しました。"
+time-sync-error: "時間の同期に失敗しました。"
