@@ -292,7 +292,7 @@ class EEWListener extends AsyncTask{
 	}
 	public function onRun(){
 		date_default_timezone_set("Asia/Tokyo");
-		$content = @file_get_contents("http://www.kmoni.bosai.go.jp/new/webservice/hypo/eew/".date("YmdHis", (microtime(true) + $this->time)).".json");
+		$content = @file_get_contents("http://www.kmoni.bosai.go.jp/webservice/hypo/eew/".date("YmdHis", (microtime(true) + $this->time)).".json");
 		$this->setResult($content);
 	}
 	public function onCompletion(Server $server){
